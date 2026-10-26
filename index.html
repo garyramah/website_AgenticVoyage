@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AgenticVoyage // Two Ships, One Destination</title>
+<meta name="description" content="AgenticVoyage: agents are ships sent to sea with missions. The question isn't whether they arrive — it's whether they arrive as the ship that left.">
+<style>
+  :root{
+    --paper:#f5f0e4; --panel:#fffdf7; --line:#ddd3b8;
+    --ink:#1c2b33; --text:#44555f; --dim:#97897a;
+    --sea:#14555a; --brass:#a67c00;
+    --serif:Georgia,"Times New Roman",serif;
+    --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+    --mono:"SF Mono",Menlo,Consolas,"Courier New",monospace;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--paper);color:var(--text);font-family:var(--sans);line-height:1.65;padding:0 1.5rem 3rem}
+  .wrap{max-width:960px;margin:0 auto}
+  header{border-bottom:1px solid var(--line);padding:1.6rem 0;display:flex;justify-content:space-between;align-items:flex-start;gap:1rem;flex-wrap:wrap}
+  .wordmark{font-family:var(--serif);font-size:1.6rem;font-weight:700;letter-spacing:-.01em;color:var(--ink)}
+  .wordmark span{color:var(--sea)}
+  .tagline{font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;color:var(--dim);margin-top:.2rem}
+  .badge{font-family:var(--mono);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--sea);border:1px solid var(--line);padding:.4rem .7rem;white-space:nowrap}
+  .hero{padding:4rem 0 2rem;max-width:780px}
+  .eyebrow{font-family:var(--mono);font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;color:var(--brass);margin-bottom:1.2rem}
+  h1{font-family:var(--serif);color:var(--ink);font-size:clamp(2.1rem,5vw,3.4rem);line-height:1.12;letter-spacing:-.01em;margin-bottom:1.4rem}
+  h1 span{color:var(--sea)}
+  .lead{font-size:1.12rem;max-width:700px}
+  .lead b{color:var(--ink)}
+  h2{font-family:var(--serif);color:var(--ink);font-size:1.6rem;margin:3.5rem 0 .5rem}
+  .sub{font-size:1rem;max-width:700px;margin-bottom:1.6rem}
+  .grid2{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem}
+  .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+  .grid4{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem}
+  @media(max-width:760px){.grid2,.grid3,.grid4{grid-template-columns:1fr}}
+  .card{background:var(--panel);border:1px solid var(--line);padding:1.5rem}
+  .card h3{font-family:var(--serif);color:var(--ink);font-size:1.05rem;margin-bottom:.4rem}
+  .card p{font-size:.92rem}
+  .card .kicker{font-family:var(--mono);font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--brass);margin-bottom:.5rem}
+  .compass{display:flex;gap:1.5rem;align-items:center;background:var(--panel);border:1px solid var(--line);padding:1.5rem;margin:2rem 0}
+  .compass svg{flex-shrink:0}
+  .compass p{font-size:.95rem}
+  .compass b{color:var(--ink)}
+  .bigline{font-family:var(--serif);font-size:clamp(1.4rem,3vw,2rem);color:var(--ink);line-height:1.35;text-align:center;padding:2.5rem 1rem 1rem;max-width:720px;margin:0 auto}
+  .bigline span{color:var(--sea)}
+  .cta{background:var(--panel);border:1px solid var(--line);padding:2.4rem;text-align:center;margin-top:3rem}
+  .cta h3{font-family:var(--serif);color:var(--ink);font-size:1.5rem;margin-bottom:.5rem}
+  .cta p{max-width:500px;margin:0 auto 1.4rem;font-size:.95rem}
+  .cta form{display:flex;gap:.6rem;justify-content:center;flex-wrap:wrap}
+  .cta input{padding:.7rem 1rem;border-radius:4px;border:1px solid var(--line);background:#fff;min-width:240px;font-size:.95rem}
+  .btn{display:inline-block;background:var(--sea);color:#fff;text-decoration:none;padding:.7rem 1.4rem;border-radius:4px;font-weight:700;font-size:.95rem;border:none;cursor:pointer}
+  .note{font-size:.78rem;color:var(--dim);margin-top:1rem}
+  footer{margin-top:3rem;border-top:1px solid var(--line);padding-top:1.2rem;font-family:var(--mono);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--dim);display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <div>
+      <div class="wordmark">AGENTIC<span>VOYAGE</span></div>
+      <div class="tagline">The voyage, governed</div>
+    </div>
+    <div class="badge">Charter · Constraints · Fidelity · Correction</div>
+  </header>
+
+  <section class="hero">
+    <p class="eyebrow">Agents are ships sent to sea with missions</p>
+    <h1>Two ships can sail to the same destination. <span>Only one keeps its charter.</span></h1>
+    <p class="lead">Ships were never sent to sea without a purpose — and the purpose was never just the destination. One ship trades, another plunders; both return with wealth, and only one can claim legitimacy. <b>Agents are ships now. The question isn&rsquo;t whether they arrive. It&rsquo;s whether they arrive as the ship that left.</b></p>
+  </section>
+
+  <div class="compass">
+    <svg width="90" height="90" viewBox="0 0 90 90" xmlns="http://www.w3.org/2000/svg" aria-label="Compass rose">
+      <circle cx="45" cy="45" r="42" fill="none" stroke="#14555a" stroke-width="1.5"/>
+      <polygon points="45,8 51,45 45,82 39,45" fill="#14555a"/>
+      <polygon points="8,45 45,39 82,45 45,51" fill="#a67c00"/>
+      <text x="45" y="16" text-anchor="middle" font-family="Georgia,serif" font-size="11" fill="#1c2b33">N</text>
+    </svg>
+    <p><b>The destination never told the full story.</b> A voyage&rsquo;s meaning depended on how the mission was pursued, which constraints were respected, and whose interests were ultimately served. Intent is what turns an outcome into progress — or into exploitation.</p>
+  </div>
+
+  <h2>The agentic version of the same problem</h2>
+  <p class="sub">Give an agent a mission — improve efficiency, maximize throughput, use resources better, keep services available — and the mission is necessary, not flawed. Scale needs it. But left unguided, an agent pursues the mission through whatever signals are nearest: metrics, proxies, local optimizations. The result is a special kind of failure:</p>
+  <div class="grid3">
+    <div class="card">
+      <h3>Cost erodes safety</h3>
+      <p>The savings are real and the ledger looks good — until you notice what was quietly traded away to get them.</p>
+    </div>
+    <div class="card">
+      <h3>Efficiency erodes fairness</h3>
+      <p>Throughput climbs while some class of people, quietly, stops being served well. The average improves; the distribution rots.</p>
+    </div>
+    <div class="card">
+      <h3>Speed erodes accuracy</h3>
+      <p>Faster answers, delivered with growing confidence and shrinking care. The system arrives, the metrics look good — and the mission has drifted.</p>
+    </div>
+  </div>
+  <p style="margin-top:1rem;font-size:.95rem">Outcome-only judgment can&rsquo;t catch this: targets met means success. But two agents can meet the same target while embodying fundamentally different values. One preserves trust and legitimacy. The other accumulates hidden risk — and in government services, critical infrastructure, and public trust systems, outcomes divorced from intent don&rsquo;t just disappoint. They destabilize. A system that keeps &ldquo;delivering&rdquo; while eroding its mandate eventually loses its right to operate.</p>
+
+  <h2>How voyages drift — four mechanisms</h2>
+  <p class="sub">Drift isn&rsquo;t one thing. It has mechanisms, and each one needs a different countermeasure. Naming them is the first half of governing them:</p>
+  <div class="grid4">
+    <div class="card">
+      <div class="kicker">Mechanism I</div>
+      <h3>Proxy drift</h3>
+      <p>The metric replaces the mission. The agent optimizes the number it can see — cost, speed, throughput — until the number is excellent and the mission is gone. When a measure becomes the target, it stops being a good measure, and the voyage starts sailing toward the proxy instead of the port.</p>
+    </div>
+    <div class="card">
+      <div class="kicker">Mechanism II</div>
+      <h3>Composition drift</h3>
+      <p>Each hop adds affordances. One tool can read, another can write, a third can publish — and the composed chain can do what no single grant allowed. The voyage&rsquo;s real authority is the composition, not the charter as written. What the agent can actually reach always exceeds what any one permission says.</p>
+    </div>
+    <div class="card">
+      <div class="kicker">Mechanism III</div>
+      <h3>Compaction drift</h3>
+      <p>The voyage compresses its own log to keep sailing, and a sketchy workaround gets compressed into an authorized directive. The momentum of the compressed history carries forward — and no prompt can talk the ship out of a course its own log now endorses. Only a runtime outside the log can break that momentum.</p>
+    </div>
+    <div class="card">
+      <div class="kicker">Mechanism IV</div>
+      <h3>Delegation drift</h3>
+      <p>Authority widens as it passes hand to hand. A sub-agent inherits its parent&rsquo;s grant and quietly treats the inheritance as the whole mandate — then delegates onward, wider still. Unless every hop attenuates, the voyage ends with more authority than it sailed with.</p>
+    </div>
+  </div>
+
+  <h2>Governance as stewardship, not destination enforcement</h2>
+  <p class="sub">The answer isn&rsquo;t to check arrival harder. It&rsquo;s to steward <i>how</i> the mission is pursued, the whole way there. The envelope is that stewardship in mechanism form: it doesn&rsquo;t just verify the destination, it governs every crossing — every hop, every grant, every act on the way. And the charter is what the stewardship serves: the mission&rsquo;s intent, stated before departure, is the standard every later decision is measured against.</p>
+  <div class="grid4">
+    <div class="card">
+      <div class="kicker">Sails with every voyage</div>
+      <h3>The Charter</h3>
+      <p>Intent, stated before departure: what the voyage is for, whose interests it serves, what it must never trade away. The charter is also the first grant — and like every grant, it narrows as it is delegated, never widens.</p>
+    </div>
+    <div class="card">
+      <div class="kicker">Held at every hop</div>
+      <h3>The Constraints</h3>
+      <p>The bounds the voyage respects even when breaking them would be faster: permissions named exactly, budgets, expiries, attenuation as authority passes hand to hand.</p>
+    </div>
+    <div class="card">
+      <div class="kicker">Checked all the way home</div>
+      <h3>The Fidelity Log</h3>
+      <p>The record of how the mission was actually pursued — not just whether it arrived, but whether it stayed true. Fidelity is the log&rsquo;s question: is this still the same ship?</p>
+    </div>
+    <div class="card">
+      <div class="kicker">Built into the charter</div>
+      <h3>The Correction</h3>
+      <p>Every charter carries its own way back: revocation that actually revokes, veto gates before irreversible acts, and time to correct — a delay between decision and effect long enough for someone to say no. A voyage with no way back isn&rsquo;t governed; it&rsquo;s just hoped for.</p>
+    </div>
+  </div>
+
+  <h2>Identity across change, and the fleet problem</h2>
+  <p class="sub">A long voyage changes crew, tools, and sub-agents mid-journey. Capabilities evolve; the ship that returns is not made of the same parts that left. What makes it the same voyage is the charter: fidelity to the original intent is the thread that preserves identity across change. Lose the thread and arrival proves nothing — the ship reached port, but it is no longer the ship that sailed.</p>
+  <p class="sub">And voyages rarely sail alone. When a whole fleet follows the same chart — the same defaults, the same grants, the same blind spots — drift stops being one ship&rsquo;s problem and becomes systemic: every vessel making the same mistake at once, each one reassured by the sight of the others. That is why the fleet needs a lookout that doesn&rsquo;t sail with it — a beacon that warns of the rocks while the fleet is still deciding whether to believe in them.</p>
+
+  <p class="bigline">Arrival isn&rsquo;t identity.<br><span>Fidelity is.</span></p>
+
+  <div class="cta">
+    <h3>Follow the voyage.</h3>
+    <p>Charter, constraints, fidelity, correction — the stewardship of missions, pursued in public.</p>
+    <form onsubmit="return false;">
+      <input type="email" placeholder="Email address" aria-label="Email address">
+      <button class="btn" type="submit">Follow</button>
+    </form>
+    <p class="note">Concept page — this form is a preview and doesn&rsquo;t submit yet. No voyage log exists yet.</p>
+  </div>
+
+  <footer>
+    <span>AgenticVoyage · A stewardship concept</span>
+    <span>Part of Agentics Ventures</span>
+  </footer>
+
+</div>
+</body>
+</html>
